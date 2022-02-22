@@ -34,7 +34,7 @@ for temp in allTemp:
     TEMP_MIN.append(tempMin)
 
 
-for i in range(len(DATES)):
+for i in range(len(DATES)+1):
     print(f"Weather in {city} for {DATES[i]} is\n"
           f"max = {TEMP_MAX[i]}\n"
           f"min = {TEMP_MIN[i]}\n")

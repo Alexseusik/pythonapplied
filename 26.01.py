@@ -25,11 +25,11 @@ if match:
     response = urlopen(url + topic)
     html_topic = str(response.read(), encoding=enc)
     print(topic)
-    # if not os.path.exists("pyfiles"):
-    #     os.mkdir("pyfiles")
+    if not os.path.exists("pyfiles"):
+        os.mkdir("pyfiles")
     for pyfile in re.findall(PYFILE, html_topic):
         m = re.search(NAME, pyfile)
         name = m.group("NAME")
-        # urlretrieve(url + pyfile,
-        #             os.path.join('pyfiles', name))
+        urlretrieve(url + pyfile,
+                    os.path.join('pyfiles', name))
         print(m, name)
