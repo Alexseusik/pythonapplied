@@ -3,14 +3,14 @@ import cgi
 
 
 def check_strings(fstr, sstr):
-    fstring = fstr.split()
-    sstring = sstr.split()
+    first_string = fstr.split()
+    second_string = sstr.split()
     resultstring = []
-    for felement in fstring:
-        if felement in sstring:
+    for element in first_string:
+        if element in second_string:
             continue
         else:
-            resultstring.append(felement)
+            resultstring.append(element)
     return resultstring
 
 
